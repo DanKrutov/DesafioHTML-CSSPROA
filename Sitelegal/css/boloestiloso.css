@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+input {
+  counter-increment: total;
+  cursor: url('crosshair.png') 25 25, crosshair;
+  height: 60px;
+  width: 60px;
+  animation: move 5s infinite alternate;
+  position: relative;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:checked {
+  counter-increment: hits total;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input:before {
+  content: '';
+  position: absolute;
+  width: 170px;
+  height: 150px;;
+  background-image: url(https://d1fk7i3duur4ft.cloudfront.net/4l_HMnflzEsZD9jr8IsgC3JOcMA=/fit-in/180x180/https://superalfa.coop.br/storage/arquivos/fotos/7983.png);
+}
+
+.score {
+  position: fixed;
+  bottom: 0;
+  height: 7vh;
+  width: 100%;
+  padding: 0.5rem;
+  color: white;
+  background: #273434;
+}
+
+.score h1:before {
+  content: counter(hits) '/' counter(total) ' ';
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1001394355818943697/C2BC43AC5A3C1A2690560DA990A4013DBCB2B49C/);
+  color: white;
+  padding-top: 20vh;
+  font-size: 20px;
+  transform: translateY(100vh);
+}
+
+input:checked
+  + input:checked
+  + input:checked
+  + input:checked
+  + input:checked
+  ~ .overlay {
+    transform: translateY(0);
+    transition: 200ms;
+}
+
+input:nth-of-type(odd) {
+  transform: translateY(80vh);
+  animation-direction: alternate-reverse;
+  animation-duration: 3.5s;
+}
+
+input:nth-of-type(n + 3) {
+  animation-delay: 1s;
+}
+
+input:nth-of-type(-n + 3) {
+  animation-duration: 6s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(10vh) translateX(40px);
+  }
+  40% {
+    transform: translateY(60vh) translateX(-150px);
+  }
+  60% {
+    transform: translateY(30vh) translateX(-100px);
+  }
+  80% {
+    transform: translateY(60vh) translateX(100px);
+  }
+  100% {
+    transform: translateY(80vh);
+  }
+}
+.img{
+	border-radius: 25px;
+}
+
+.txt{
+	border: 3px solid black;
+	background-color: green;
+}

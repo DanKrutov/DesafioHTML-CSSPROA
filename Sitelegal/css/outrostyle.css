@@ -1,0 +1,171 @@
+*{ margin: 0px; padding: 0px; list-style-type: none; font-family: Verdana;} /* remove bullets de listas */
+
+main{
+	width: 1000;
+	height: 2830;
+	background-color: #ccc;
+	margin: auto;
+}
+
+.caixa1{
+	width: 100%;
+	height: 125px;
+}
+.logo{
+	position: relative;
+	top: 25px;
+	margin: auto;
+	width: 50%;
+	height: 50px;
+	text-align: center;
+	background-color: green;
+	border-radius: 25px;
+	border: 3px solid black;
+	animation-name: anim1;
+	animation-duration: 3s;
+	font-family:Comic Sans MS
+}
+
+@keyframes anim1{
+	0% { left: 0px; top:0px; opacity:0;}
+	100% { left: 0px; top:25px; opacity:1;}
+}
+
+.fatores{
+	width: 100%;
+	height: 70px;
+}
+.fator1{
+	left: 70px;
+	text-align: center;
+	float: left;
+	position: relative;
+	width: 200px;
+	height: 50px;
+	background-color: grey;
+	border-radius: 25px 0px 0px 25px;
+	animation-name: fat1;
+	animation-duration: 3s;
+	border: 2px solid black;
+}
+
+@keyframes fat1{
+	0% { left: 0px;}
+	100% { left: 70px;}
+}
+
+.fator1:hover{
+	background-color: green;
+	color: white;
+}
+.fator2{
+	left: 90px;
+	text-align: center;
+	float: left;
+	position: relative;
+	width: 200px;
+	height: 50px;
+	background-color: green;
+	border: 3px solid black;
+	animation-name: fat2;
+	animation-duration: 3s;
+}
+
+@keyframes fat2{
+	0% { left: 0px;}
+	100% { left: 90px;}
+}
+
+.fator2:hover{
+	background-color: green;
+	color: white;
+}
+.fator3{
+	left: 110px;
+	text-align: center;
+	float: left;
+	position: relative;
+	width: 200px;
+	height: 50px;
+	background-color: grey;
+	border: 2px solid black;
+	animation-name: fat3;
+	animation-duration: 3s;
+}
+
+@keyframes fat3{
+	0% { left: 0px;}
+	100% { left: 110px;}
+}
+
+.fator3:hover{
+	background-color: green;
+	color: white;
+}
+.fator4{
+	left: 130px;
+	text-align: center;
+	float: left;
+	position: relative;
+	width: 200px;
+	height: 50px;
+	background-color: grey;
+	border-radius: 0px 25px 25px 0px;
+	border: 2px solid black;
+	animation-name: fat4;
+	animation-duration: 3s;
+}
+
+@keyframes fat4{
+	0% { left: 0px;}
+	100% { left: 130px;}
+}
+
+.fator4:hover{
+	background-color: green;
+	color: white;
+}
+
+/*--------------------cabeçalho acima------------------------ */
+
+.caixacontent{
+	position: relative;
+	top: 05px;
+	margin: auto;
+	width: 80%;
+	height: auto;
+	padding: 0% 10%;
+}
+
+.title{
+	height: auto;
+	text-align: left;
+	position: relative;
+	top: 30px;
+	margin: 30px 0px;
+	width: 776px;
+	border: 2px solid black;
+	border-radius: 25px 25px 25px 25px;
+	padding: 10px;
+	background-color: grey;
+}
+.txtscroll{
+	height: 225px;
+	text-align: left;
+	position: relative;
+	top: 30px;
+	width: 60%;
+	border: 2px solid black;
+	border-radius: 25px 0px 0px 25px;
+	padding: 10px;
+	background-color: grey;
+	overflow: auto;
+}
+.img{
+	left: 40px;
+	top: -180px;
+	position: relative;
+	float: right;
+	width: 325px;
+	height: 200px;
+}
